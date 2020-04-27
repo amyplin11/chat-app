@@ -12,7 +12,7 @@ interface State {
   data: any;
 }
 
-export const UseGetEntries = ({ searchString }: any) => {
+export const UseGetEntries = ({}: any) => {
   const [state, setState] = useState<State>({
     data: null,
     error: null,
@@ -35,8 +35,7 @@ export const UseGetEntries = ({ searchString }: any) => {
     }
 
     fetchData();
-  }, [searchString]);
+  }, []);
 
-  const { data, error, loading } = state;
-  return [data, error, loading];
+  return state;
 };

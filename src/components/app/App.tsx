@@ -4,7 +4,6 @@ import { MainPage } from "components/pages/main";
 export const App = () => {
   return (
     <>
-      hello!
       <MainPage />
     </>
   );

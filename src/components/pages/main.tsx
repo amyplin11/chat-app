@@ -1,9 +1,18 @@
 import React, { FunctionComponent } from "react";
-import { UseGetEntries } from "hooks/getEntries";
+import { MainTable } from "components/pages/main-table";
+import styled from "styled-components";
+
+const TableContainer = styled.div`
+  display: flex;
+  margin: 20px;
+`;
 
 export const MainPage: FunctionComponent = () => {
-  const [data, error, loading] = UseGetEntries({});
-
-  console.log("data = ", data);
-  return <>main page</>;
+  return (
+    <>
+      <TableContainer>
+        <MainTable />
+      </TableContainer>
+    </>
+  );
 };
